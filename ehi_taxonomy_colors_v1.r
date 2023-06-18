@@ -53,13 +53,13 @@ cols_subset <- cols[sort(sample(length(cols),nrow(phylum_genomes_sorted),replace
 #grid.raster(cols_subset, interpolate = FALSE)
 
 #Add colors to phylum table
-phylum_genomes <- phylum_genomes %>%
+phylum_genomes_sorted <- phylum_genomes_sorted %>%
   mutate(colors=cols_subset)
 
 # GENERATE OUTPUT
 
 #Phylum-color table
-write.table(phylum_genomes[,-1],"ehi_phylum_colors.tsv",col.names=T,row.names=F,quote=F,sep="\t")
+write.table(phylum_genomes_sorted[,-1],"ehi_phylum_colors.tsv",col.names=T,row.names=F,quote=F,sep="\t")
 
 #Phylum tree
 write.tree(phylum_tree,"phylum_tree.tree")

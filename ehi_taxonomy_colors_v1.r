@@ -47,6 +47,7 @@ cols <- c("#5B0A76", "#63098B", "#7007AB", "#7C07CA", "#8207DF", "#8007EA","#780
 #Subset colors to the number of phyla
 set.seed(100)
 cols_subset <- cols[sort(sample(length(cols),nrow(phylum_genomes_sorted),replace=FALSE))]
+cols_subset <- rev(cols_subset)
 
 #Visualise color
 #grid.raster(cols, interpolate = FALSE)

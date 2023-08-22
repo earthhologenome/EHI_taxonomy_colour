@@ -13,18 +13,21 @@ library(grid)
 # GET INPUT DATA FROM GTDB
 options(timeout=1000)
 
-tree_URL="https://data.gtdb.ecogenomic.org/releases/release214/214.0/bac120_r214.tree"
-download.file(tree_URL, "bac120_r214.tree")
-tree <- read.tree("bac120_r214.tree")
+tree_bacteria_URL="https://data.gtdb.ecogenomic.org/releases/release214/214.0/bac120_r214.tree"
+download.file(tree_bacteria_URL, "bac120_r214.tree")
+tree_bacteria <- read.tree("bac120_r214.tree")
 
 bacteria_URL="https://data.gtdb.ecogenomic.org/releases/release214/214.0/bac120_taxonomy_r214.tsv"
 download.file(bacteria_URL, "bac120_taxonomy_r214.tsv")
 bacteria <- read.table("bac120_taxonomy_r214.tsv")
 
+tree_archaea_URL="https://data.gtdb.ecogenomic.org/releases/release214/214.0/ar53_r214.tree"
+download.file(tree_archaea_URL, "ar53_r214.tree")
+tree_archaea <- read.tree("ar53_r214.tree")
+
 archaea_URL="https://data.gtdb.ecogenomic.org/releases/release214/214.0/ar53_taxonomy_r214.tsv"
 download.file(archaea_URL, "ar53_taxonomy_r214.tsv")
 archaea <- read.table("ar53_taxonomy_r214.tsv")
-
 
 # RUN ANALYSIS
 
@@ -37,7 +40,7 @@ bacteria_phylum_genomes <- bacteria %>%
   distinct(phylum, .keep_all = TRUE)
 
 #Prune the phylogenetic tree with one representative per phylum
-bacteria_phylum_tree <- keep.tip(tree,bacteria_phylum_genomes[,1])
+bacteria_phylum_tree <- keep.tip(tree_bacteria,bacteria_phylum_genomes[,1])
 
 #Sort phylum table by tree topology
 bacteria_phylum_genomes_sorted <- bacteria_phylum_genomes %>%
@@ -56,27 +59,35 @@ cols_subset <- rev(cols_subset)
 
 #Add colors to Bacterial phyla
 bacteria_phylum_genomes_sorted <- bacteria_phylum_genomes_sorted %>%
-  mutate(colors=cols_subset) %>%
-  select(phylum,colors)
+  mutate(colors=cols_subset)
 
 #Visualise color
 #grid.raster(cols, interpolate = FALSE)
 #grid.raster(cols_subset, interpolate = FALSE)
 
 #List archaeal phyla
-phylum_archaea <- archaea %>%
+archaea_phylum_genomes <- archaea %>%
   rename(genome=V1) %>%
   separate(V2, into = c("division","phylum","class","order","family","genus","species"), sep = ";", remove = FALSE) %>%
-  select(phylum) %>%
-  unique()
+  select(genome,phylum) %>%
+  filter(genome %in% tree_archaea$tip.label) %>%
+  distinct(phylum, .keep_all = TRUE)
 
-#Add colors to phylum table
-archaea_phylum_genomes_sorted <- phylum_archaea %>%
-  mutate(colors=rep("#CCCCCC",nrow(phylum_archaea)))
+#Prune the phylogenetic tree with one representative per phylum
+archaea_phylum_tree <- keep.tip(tree_archaea,archaea_phylum_genomes[,1])
 
-# MERGE ARCHAEAL AND BACTERIAL TABLES
+#Sort phylum table by tree topology and add colors
+archaea_phylum_genomes_sorted <- archaea_phylum_genomes %>%
+  arrange(match(genome, archaea_phylum_tree$tip.label)) %>%
+  mutate(colors=rep("#CCCCCC",nrow(archaea_phylum_genomes)))
 
-all_genomes_sorted <- rbind(archaea_phylum_genomes_sorted,bacteria_phylum_genomes_sorted)
+#Replace genome names in tips with phylum names
+archaea_phylum_tree$tip.label <- archaea_phylum_genomes_sorted[,2]
+
+# MERGE ARCHAEAL AND BACTERIAL TABLES AND TREE
+all_genomes_sorted <- rbind(archaea_phylum_genomes_sorted,bacteria_phylum_genomes_sorted) %>%
+    select(phylum,colors)
+all_phylum_tree <- bind.tree(archaea_phylum_tree,bacteria_phylum_tree)
 
 # GENERATE OUTPUT
 
@@ -84,13 +95,13 @@ all_genomes_sorted <- rbind(archaea_phylum_genomes_sorted,bacteria_phylum_genome
 write.table(all_genomes_sorted,"ehi_phylum_colors.tsv",col.names=T,row.names=F,quote=F,sep="\t")
 
 #Phylum tree
-write.tree(phylum_tree,"phylum_tree.tree")
+write.tree(all_phylum_tree,"phylum_tree.tree")
 
 #Phylum tree images
 pdf("phylum_tree.pdf",width=4,height=25)
-plot(phylum_tree, tip.color = cols_subset,cex=0.75)
+plot(all_phylum_tree, tip.color = all_genomes_sorted$colors,cex=0.75)
 dev.off()
 
 png("phylum_tree.png",width=600,height=1800)
-plot(phylum_tree, tip.color = cols_subset,cex=0.75)
+plot(all_phylum_tree, tip.color = all_genomes_sorted$colors,cex=0.75)
 dev.off()

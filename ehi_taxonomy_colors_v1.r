@@ -1,5 +1,5 @@
 #######
-# Earth Hologenome Initiative taxonomy colour palette generation
+# Earth Hologenome Initiative bacteria colour palette generation
 # by Antton Alberdi (antton.alberdi@sund.ku.dk)
 # version=1.0
 # 17/06/2023
@@ -17,14 +17,19 @@ tree_URL="https://data.gtdb.ecogenomic.org/releases/release214/214.0/bac120_r214
 download.file(tree_URL, "bac120_r214.tree")
 tree <- read.tree("bac120_r214.tree")
 
-taxonomy_URL="https://data.gtdb.ecogenomic.org/releases/release214/214.0/bac120_taxonomy_r214.tsv"
-download.file(taxonomy_URL, "bac120_taxonomy_r214.tsv")
-taxonomy <- read.table("bac120_taxonomy_r214.tsv")
+bacteria_URL="https://data.gtdb.ecogenomic.org/releases/release214/214.0/bac120_taxonomy_r214.tsv"
+download.file(bacteria_URL, "bac120_taxonomy_r214.tsv")
+bacteria <- read.table("bac120_taxonomy_r214.tsv")
+
+archaea_URL="https://data.gtdb.ecogenomic.org/releases/release214/214.0/ar53_taxonomy_r214.tsv"
+download.file(archaea_URL, "ar53_taxonomy_r214.tsv")
+archaea <- read.table("ar53_taxonomy_r214.tsv")
+
 
 # RUN ANALYSIS
 
 #Create one (first) representative genome per phylum
-phylum_genomes <- taxonomy %>%
+phylum_genomes <- bacteria %>%
   rename(genome=V1) %>%
   separate(V2, into = c("division","phylum","class","order","family","genus","species"), sep = ";", remove = FALSE) %>%
   select(genome,phylum) %>%
@@ -52,6 +57,12 @@ cols_subset <- rev(cols_subset)
 #Visualise color
 #grid.raster(cols, interpolate = FALSE)
 #grid.raster(cols_subset, interpolate = FALSE)
+
+#List archaeal phyla
+phylum_archaea <- archaea %>%
+  rename(genome=V1) %>%
+  separate(V2, into = c("division","phylum","class","order","family","genus","species"), sep = ";", remove = FALSE) %>%
+  select(phylum) %>%
 
 #Add colors to phylum table
 phylum_genomes_sorted <- phylum_genomes_sorted %>%

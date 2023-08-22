@@ -1,0 +1,283 @@
+#NEXUS
+begin taxa;
+	dimensions ntax=181;
+	taxlabels
+	p__4484-113
+	p__4572-55
+	p__AABM5-125-24
+	p__ARS69
+	p__AUK180
+	p__Abyssobacteria
+	p__Acidobacteriota
+	p__Actinomycetota
+	p__Aerophobota
+	p__Aquificota
+	p__Armatimonadota
+	p__Atribacterota
+	p__Auribacterota
+	p__B130-G9
+	p__BMS3Abin14
+	p__BS750m-G25
+	p__BS750m-G34
+	p__Bacillota
+	p__Bacillota_A
+	p__Bacillota_B
+	p__Bacillota_C
+	p__Bacillota_D
+	p__Bacillota_E
+	p__Bacillota_F
+	p__Bacillota_G
+	p__Bacillota_H
+	p__Bacteroidota
+	p__Bdellovibrionota
+	p__Bipolaricaulota
+	p__CAIJMQ01
+	p__CAKKQC01
+	p__CG03
+	p__CG2-30-53-67
+	p__CG2-30-70-394
+	p__CLD3
+	p__CSP1-3
+	p__CSSED10-310
+	p__Caldisericota
+	p__Calditrichota
+	p__Calescibacterota
+	p__Campylobacterota
+	p__Chlamydiota
+	p__Chloroflexota
+	p__Chrysiogenota
+	p__Cloacimonadota
+	p__Coprothermobacterota
+	p__Cyanobacteriota
+	p__DRYD01
+	p__DTU030
+	p__DUMD01
+	p__DUMJ01
+	p__DYJV01
+	p__Deferribacterota
+	p__Deinococcota
+	p__Delongbacteria
+	p__Dependentiae
+	p__Desantisbacteria
+	p__Desulfobacterota
+	p__Desulfobacterota_B
+	p__Desulfobacterota_C
+	p__Desulfobacterota_D
+	p__Desulfobacterota_E
+	p__Desulfobacterota_F
+	p__Desulfobacterota_G
+	p__Dictyoglomota
+	p__Dormibacterota
+	p__Edwardsbacteria
+	p__Eisenbacteria
+	p__Elusimicrobiota
+	p__Eremiobacterota
+	p__FCPU426
+	p__FEN-1099
+	p__Fermentibacterota
+	p__Fibrobacterota
+	p__Firestonebacteria
+	p__Fusobacteriota
+	p__GCA-001730085
+	p__GCA-2686955
+	p__Gemmatimonadota
+	p__Goldbacteria
+	p__HKB111
+	p__Hydrogenedentota
+	p__J088
+	p__JAAXHH01
+	p__JAAXVQ01
+	p__JABDJQ01
+	p__JABMQX01
+	p__JACIXR01
+	p__JACPQY01
+	p__JACPSX01
+	p__JACPUC01
+	p__JACPWU01
+	p__JACQOV01
+	p__JACRDZ01
+	p__JADFOP01
+	p__JADJOY01
+	p__JAFGBW01
+	p__JAFGND01
+	p__JAGLTZ01
+	p__JAGLYR01
+	p__JAGOBX01
+	p__JAGOEH01
+	p__JAGRBM01
+	p__JAHJDO01
+	p__JAJRZV01
+	p__JAJYCY01
+	p__JAKLEM01
+	p__JAMCPX01
+	p__JANLFM01
+	p__JdFR-76
+	p__KSB1
+	p__Krumholzibacteriota
+	p__Latescibacterota
+	p__Lindowbacteria
+	p__Margulisbacteria
+	p__Marinisomatota
+	p__Mcinerneyibacteriota
+	p__Methylomirabilota
+	p__Moduliflexota
+	p__Muirbacteria
+	p__Myxococcota
+	p__Myxococcota_A
+	p__Myxococcota_B
+	p__NPL-UPA2
+	p__Nitrospinota
+	p__Nitrospinota_B
+	p__Nitrospirota
+	p__Nitrospirota_A
+	p__Nitrospirota_B
+	p__OLB16
+	p__Omnitrophota
+	p__PUNC01
+	p__Patescibacteria
+	p__Planctomycetota
+	p__Poribacteria
+	p__Pseudomonadota
+	p__QNDG01
+	p__RBG-13-61-14
+	p__RBG-13-66-14
+	p__RUG730
+	p__Ratteibacteria
+	p__Riflebacteria
+	p__SAR324
+	p__SLNR01
+	p__SM23-31
+	p__SZUA-182
+	p__SZUA-79
+	p__Schekmanbacteria
+	p__Spirochaetota
+	p__Sumerlaeota
+	p__Synergistota
+	p__T1SED10-198M
+	p__T1Sed10-126
+	p__TA06
+	p__TA06_A
+	p__Tectomicrobia
+	p__Thermodesulfobiota
+	p__Thermosulfidibacterota
+	p__Thermotogota
+	p__UBA10199
+	p__UBA1439
+	p__UBA2233
+	p__UBA3054
+	p__UBA6262
+	p__UBA6266
+	p__UBA8248
+	p__UBA8481
+	p__UBA9089
+	p__UBP13
+	p__UBP14
+	p__UBP15
+	p__UBP17
+	p__UBP18
+	p__UBP4
+	p__UBP6
+	p__UBP7
+	p__VGIX01
+	p__Verrucomicrobiota
+	p__WOR-3
+	p__Wallbacteria
+	p__Zixibacteria
+;
+end;
+
+begin trees;
+	tree tree_1 = [&R] (p__Spirochaetota:1.080056,((p__JAGOBX01:0.717395,(p__T1SED10-198M:0.747445,p__AUK180:0.894623)[&label=8.0]:0.08369)[&label=34.0]:0.097609,(p__Dependentiae:1.309781,((p__UBA8481:0.792158,(p__Lindowbacteria:0.784266,p__T1Sed10-126:0.747513)[&label=100.0]:0.083353)[&label=98.0]:0.069237,((p__Planctomycetota:1.203939,(p__Chlamydiota:1.462901,p__Verrucomicrobiota:1.259025)[&label=39.0]:0.063858)[&label=7.0]:0.072403,(((((p__Sumerlaeota:0.721622,p__OLB16:0.847621)[&label=64.0]:0.057031,((p__Abyssobacteria:0.524777,p__Hydrogenedentota:0.831998)[&label=77.0]:0.096461,(p__UBP4:0.607096,p__Poribacteria:0.785385)[&label=31.0]:0.039148)[&label=16.0]:0.026668)[&label=23.0]:0.030876,(p__RBG-13-66-14:0.81811,(p__Fermentibacterota:1.022533,((((p__Fibrobacterota:1.113735,p__JAGOEH01:0.686513)[&label=61.0]:0.054074,((p__AABM5-125-24:0.865884,p__Delongbacteria:0.753972)[&label=80.0]:0.063283,(((p__Calditrichota:0.719438,((p__KSB1:0.473707,(p__JdFR-76:0.407826,p__QNDG01:0.603116)[&label=43.0]:0.026378)[&label=90.0]:0.031092,(p__BS750m-G25:0.422949,p__SM23-31:0.500962)[&label=69.0]:0.05386)[&label=75.0]:0.029437)[&label=88.0]:0.027462,(p__CLD3:0.552486,p__Bacteroidota:1.472032)[&label=87.0]:0.045272)[&label=11.0]:0.027901,p__Marinisomatota:1.066048)[&label=75.0]:0.0365)[&label=93.0]:0.060832)[&label=26.0]:0.029171,((p__Cloacimonadota:1.168085,p__UBP14:0.816307)[&label=2.0]:0.037649,(p__JAFGND01:0.875535,p__WOR-3:0.913054)[&label=7.0]:0.034676)[&label=21.0]:0.044016)[&label=16.0]:0.029037,((((p__TA06_A:0.440078,(p__JAAXHH01:0.726806,p__Latescibacterota:0.815072)[&label=65.0]:0.036564)[&label=44.0]:0.036355,(p__JAGLTZ01:0.568918,p__Zixibacteria:0.702916)[&label=23.0]:0.039005)[&label=14.0]:0.030358,(((p__VGIX01:0.52888,(p__JABDJQ01:0.573641,(p__ARS69:0.496013,p__JAGLYR01:0.46916)[&label=28.0]:0.048082)[&label=54.0]:0.037495)[&label=57.0]:0.033354,(p__Eisenbacteria:0.753697,p__Krumholzibacteriota:0.676298)[&label=39.0]:0.021103)[&label=89.0]:0.042278,(p__GCA-2686955:0.621418,p__Gemmatimonadota:0.915799)[&label=53.0]:0.043026)[&label=28.0]:0.050511)[&label=0.0]:0.022067,(p__4572-55:0.608771,(p__Edwardsbacteria:0.59999,p__TA06:0.484427)[&label=97.0]:0.070123)[&label=32.0]:0.022751)[&label=8.0]:0.02753)[&label=7.0]:0.019884)[&label=68.0]:0.034897)[&label=56.0]:0.02953)[&label=1.0]:0.022496,((p__Acidobacteriota:1.125068,(p__B130-G9:0.756386,p__CSSED10-310:0.720005)[&label=74.0]:0.046641)[&label=50.0]:0.034921,(((((p__Campylobacterota:1.301561,p__Aquificota:0.858925)[&label=18.0]:0.05303,(p__Thermosulfidibacterota:0.533508,(p__Chrysiogenota:0.619896,p__Deferribacterota:0.759542)[&label=99.0]:0.073341)[&label=22.0]:0.03627)[&label=10.0]:0.040851,((p__Desulfobacterota_D:0.652854,(p__JAJRZV01:0.530351,p__Calescibacterota:0.856793)[&label=42.0]:0.12064)[&label=13.0]:0.040208,((p__DYJV01:0.596147,p__Desulfobacterota_G:0.691842)[&label=2.0]:0.067141,(p__JAMCPX01:0.56083,p__SZUA-79:0.782475)[&label=25.0]:0.075105)[&label=8.0]:0.050547)[&label=4.0]:0.040793)[&label=2.0]:0.042512,((p__J088:0.750474,p__Pseudomonadota:1.565156)[&label=3.0]:0.040068,(p__UBA2233:0.809322,p__Nitrospirota_A:0.769623)[&label=59.0]:0.107436)[&label=0.0]:0.021702)[&label=0.0]:0.025908,(((((p__Desulfobacterota_E:0.664234,(p__BMS3Abin14:0.627256,p__Desulfobacterota_C:0.616405)[&label=6.0]:0.054602)[&label=6.0]:0.022925,((p__Desulfobacterota_F:0.716598,(((p__SZUA-182:0.49575,(p__Moduliflexota:0.536957,p__Methylomirabilota:0.785347)[&label=3.0]:0.034331)[&label=68.0]:0.033339,(p__Schekmanbacteria:0.545831,(((p__UBA8248:0.687188,(p__JACPUC01:0.423675,p__JADFOP01:0.399744)[&label=10.0]:0.059668)[&label=6.0]:0.030524,(p__JACPSX01:0.38095,(p__Tectomicrobia:0.608379,p__Nitrospinota_B:0.364949)[&label=70.0]:0.032407)[&label=5.0]:0.03217)[&label=92.0]:0.038953,p__Nitrospinota:0.672967)[&label=69.0]:0.039284)[&label=27.0]:0.016472)[&label=17.0]:0.020691,((p__CG2-30-53-67:0.432617,(p__Nitrospirota_B:0.511573,p__CG2-30-70-394:0.577982)[&label=0.0]:0.11559)[&label=0.0]:0.043848,p__Nitrospirota:0.786172)[&label=59.0]:0.042328)[&label=27.0]:0.05514)[&label=0.0]:0.022799,p__Desulfobacterota:0.792523)[&label=0.0]:0.027074)[&label=0.0]:0.024851,(p__UBA10199:0.686765,(p__JACQOV01:0.443275,p__JACPQY01:0.676974)[&label=25.0]:0.097906)[&label=13.0]:0.048742)[&label=0.0]:0.017752,((p__RBG-13-61-14:0.659657,(p__Myxococcota_B:0.575228,p__FEN-1099:0.568234)[&label=2.0]:0.052567)[&label=1.0]:0.033437,(p__Myxococcota:0.87806,((p__JAGRBM01:0.611893,(p__JADJOY01:0.560489,p__Myxococcota_A:0.642359)[&label=28.0]:0.035254)[&label=0.0]:0.032742,p__Desulfobacterota_B:0.736316)[&label=2.0]:0.028169)[&label=0.0]:0.026893)[&label=8.0]:0.031067)[&label=0.0]:0.039904,((p__UBP6:1.130738,p__SAR324:0.951058)[&label=19.0]:0.051113,p__Bdellovibrionota:0.879852)[&label=8.0]:0.033492)[&label=0.0]:0.031451)[&label=2.0]:0.02892)[&label=1.0]:0.039205)[&label=0.0]:0.019938,(((((p__Bipolaricaulota:0.876051,p__Deinococcota:0.909845)[&label=30.0]:0.086907,(p__Patescibacteria:1.266288,(p__4484-113:1.132287,(p__UBP15:0.773342,p__UBP7:1.180116)[&label=3.0]:0.062697)[&label=9.0]:0.068668)[&label=8.0]:0.034743)[&label=0.0]:0.032387,(((p__Riflebacteria:0.769414,p__UBP17:0.697206)[&label=31.0]:0.054583,(p__Muirbacteria:0.734695,p__Wallbacteria:0.756653)[&label=31.0]:0.082424)[&label=95.0]:0.049592,(p__Mcinerneyibacteriota:0.762232,p__Fusobacteriota:0.961408)[&label=7.0]:0.076814)[&label=6.0]:0.040931)[&label=0.0]:0.02602,(((p__Synergistota:0.880532,p__Atribacterota:0.600185)[&label=41.0]:0.045083,(p__Thermotogota:1.036817,((p__DUMJ01:0.63991,(p__Dictyoglomota:0.547572,p__JACIXR01:0.575673)[&label=38.0]:0.056751)[&label=20.0]:0.039123,((p__DRYD01:0.948845,p__Thermodesulfobiota:0.714475)[&label=8.0]:0.163467,((p__HKB111:0.743697,p__Coprothermobacterota:0.852935)[&label=61.0]:0.101369,(p__JANLFM01:0.631221,p__Caldisericota:1.063555)[&label=65.0]:0.039092)[&label=42.0]:0.040651)[&label=2.0]:0.026432)[&label=4.0]:0.034049)[&label=0.0]:0.037847)[&label=0.0]:0.032019,((p__Actinomycetota:1.549393,((((p__CSP1-3:0.677918,(p__Dormibacterota:0.858366,p__Chloroflexota:1.23129)[&label=100.0]:0.065099)[&label=7.0]:0.037192,(p__UBP13:0.517494,p__Armatimonadota:1.193123)[&label=19.0]:0.025797)[&label=1.0]:0.029575,p__Eremiobacterota:0.967089)[&label=14.0]:0.027873,((p__Bacillota_G:0.55549,((((p__DUMD01:0.328374,p__Bacillota_A:0.753175)[&label=14.0]:0.028762,(p__Bacillota_C:0.585281,p__Bacillota_B:0.615939)[&label=21.0]:0.0218)[&label=10.0]:0.021419,((p__Bacillota_D:0.661147,p__Bacillota:1.04621)[&label=0.0]:0.025682,(p__Bacillota_H:0.667046,(p__SLNR01:0.389518,p__DTU030:0.363255)[&label=23.0]:0.037966)[&label=1.0]:0.023378)[&label=0.0]:0.022532)[&label=3.0]:0.017629,p__Bacillota_F:0.721492)[&label=20.0]:0.032028)[&label=16.0]:0.027775,p__Bacillota_E:0.948373)[&label=40.0]:0.05296)[&label=7.0]:0.038448)[&label=8.0]:0.049344,(p__Cyanobacteriota:1.819682,p__Margulisbacteria:0.720191)[&label=100.0]:0.051122)[&label=4.0]:0.025109)[&label=0.0]:0.021514)[&label=2.0]:0.037296,((((p__UBA6262:0.482615,(p__Elusimicrobiota:1.276408,p__RUG730:0.775183)[&label=48.0]:0.03073)[&label=82.0]:0.048867,p__CG03:1.089967)[&label=92.0]:0.087134,(((p__JAJYCY01:0.507759,p__CAKKQC01:0.710351)[&label=52.0]:0.091626,(p__FCPU426:0.569543,p__JAAXVQ01:0.6221)[&label=12.0]:0.065686)[&label=26.0]:0.047721,(p__Firestonebacteria:0.585162,p__Goldbacteria:0.82524)[&label=30.0]:0.055726)[&label=85.0]:0.046089)[&label=25.0]:0.033583,((((p__Aerophobota:0.706593,p__CAIJMQ01:0.681338)[&label=5.0]:0.060754,((p__BS750m-G34:0.562736,p__NPL-UPA2:0.542899)[&label=38.0]:0.045186,p__JAHJDO01:0.557478)[&label=5.0]:0.059482)[&label=0.0]:0.039371,((p__Ratteibacteria:0.722135,p__Omnitrophota:0.926479)[&label=35.0]:0.034045,(p__GCA-001730085:0.791737,((p__JAKLEM01:0.509447,(((p__UBA1439:0.504548,p__PUNC01:0.596205)[&label=79.0]:0.076769,(p__UBA3054:0.819065,p__JABMQX01:0.564846)[&label=26.0]:0.053617)[&label=7.0]:0.041582,(p__UBA6266:0.619697,p__Auribacterota:0.597374)[&label=28.0]:0.05059)[&label=1.0]:0.02334)[&label=4.0]:0.023155,(p__JAFGBW01:0.681831,p__JACPWU01:0.556699)[&label=25.0]:0.038979)[&label=38.0]:0.055965)[&label=8.0]:0.02977)[&label=2.0]:0.029641)[&label=1.0]:0.035124,(p__JACRDZ01:0.568683,(p__UBA9089:0.641503,(p__UBP18:0.398223,p__Desantisbacteria:0.638219)[&label=59.0]:0.051859)[&label=19.0]:0.036507)[&label=11.0]:0.03607)[&label=0.0]:0.029254)[&label=4.0]:0.035821)[&label=0.0]:0.018665)[&label=0.0]:0.025462)[&label=1.0]:0.027367)[&label=0.0]:0.028657)[&label=19.0]:0.028564)[&label=99.0]:0.030959)[&label="d__Bacteria"];
+end;
+
+begin figtree;
+	set appearance.backgroundColorAttribute="Default";
+	set appearance.backgroundColour=#ffffff;
+	set appearance.branchColorAttribute="User selection";
+	set appearance.branchColorGradient=false;
+	set appearance.branchLineWidth=1.0;
+	set appearance.branchMinLineWidth=0.0;
+	set appearance.branchWidthAttribute="Fixed";
+	set appearance.foregroundColour=#000000;
+	set appearance.hilightingGradient=false;
+	set appearance.selectionColour=#2d3680;
+	set branchLabels.colorAttribute="User selection";
+	set branchLabels.displayAttribute="Branch times";
+	set branchLabels.fontName="sansserif";
+	set branchLabels.fontSize=8;
+	set branchLabels.fontStyle=0;
+	set branchLabels.isShown=false;
+	set branchLabels.significantDigits=4;
+	set layout.expansion=0;
+	set layout.layoutType="RECTILINEAR";
+	set layout.zoom=0;
+	set legend.attribute="label";
+	set legend.fontSize=10.0;
+	set legend.isShown=false;
+	set legend.significantDigits=4;
+	set nodeBars.barWidth=4.0;
+	set nodeBars.displayAttribute=null;
+	set nodeBars.isShown=false;
+	set nodeLabels.colorAttribute="User selection";
+	set nodeLabels.displayAttribute="Node ages";
+	set nodeLabels.fontName="sansserif";
+	set nodeLabels.fontSize=8;
+	set nodeLabels.fontStyle=0;
+	set nodeLabels.isShown=false;
+	set nodeLabels.significantDigits=4;
+	set nodeShapeExternal.colourAttribute="User selection";
+	set nodeShapeExternal.isShown=false;
+	set nodeShapeExternal.minSize=10.0;
+	set nodeShapeExternal.scaleType=Width;
+	set nodeShapeExternal.shapeType=Circle;
+	set nodeShapeExternal.size=4.0;
+	set nodeShapeExternal.sizeAttribute="Fixed";
+	set nodeShapeInternal.colourAttribute="User selection";
+	set nodeShapeInternal.isShown=false;
+	set nodeShapeInternal.minSize=10.0;
+	set nodeShapeInternal.scaleType=Width;
+	set nodeShapeInternal.shapeType=Circle;
+	set nodeShapeInternal.size=4.0;
+	set nodeShapeInternal.sizeAttribute="Fixed";
+	set polarLayout.alignTipLabels=false;
+	set polarLayout.angularRange=0;
+	set polarLayout.rootAngle=0;
+	set polarLayout.rootLength=100;
+	set polarLayout.showRoot=true;
+	set radialLayout.spread=0.0;
+	set rectilinearLayout.alignTipLabels=false;
+	set rectilinearLayout.curvature=0;
+	set rectilinearLayout.rootLength=100;
+	set scale.offsetAge=0.0;
+	set scale.rootAge=1.0;
+	set scale.scaleFactor=1.0;
+	set scale.scaleRoot=false;
+	set scaleAxis.automaticScale=true;
+	set scaleAxis.fontSize=8.0;
+	set scaleAxis.isShown=true;
+	set scaleAxis.lineWidth=1.0;
+	set scaleAxis.majorTicks=0.5;
+	set scaleAxis.minorTicks=0.25;
+	set scaleAxis.origin=0.0;
+	set scaleAxis.reverseAxis=false;
+	set scaleAxis.showGrid=true;
+	set scaleBar.automaticScale=true;
+	set scaleBar.fontSize=10.0;
+	set scaleBar.isShown=true;
+	set scaleBar.lineWidth=1.0;
+	set scaleBar.scaleRange=0.0;
+	set tipLabels.colorAttribute="User selection";
+	set tipLabels.displayAttribute="Names";
+	set tipLabels.fontName="sansserif";
+	set tipLabels.fontSize=8;
+	set tipLabels.fontStyle=0;
+	set tipLabels.isShown=true;
+	set tipLabels.significantDigits=4;
+	set trees.order=false;
+	set trees.orderType="increasing";
+	set trees.rooting=true;
+	set trees.rootingType="User Selection";
+	set trees.transform=false;
+	set trees.transformType="cladogram";
+end;
+
